@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La pause Hetic</title>
+</head>
+<body>
+	<div id="locale"></div>
+ 
+ 
+<script type="text/javascript">
+function afficher() {
+  var offsetUTC = +12,
+  lD = new Date(),
+  oD = new Date();
+  oD.setHours(lD.getUTCHours()+offsetUTC);
+ 
+  document.getElementById('locale').innerHTML = lD.toLocaleString();
+}
+ 
+window.onload=function() {
+  afficher();
+  setInterval(afficher,1000);
+}
+</script>
+</body>
+</html>
